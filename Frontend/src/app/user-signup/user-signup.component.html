@@ -1,3 +1,10 @@
+<mat-toolbar >
+  <img src="../../assets/B.png">
+  <span>Blogger</span>
+  <div class="navspace" ></div>
+
+  <a  mat-raised-button routerLink="login">CREATE YOUR BLOG</a>
+</mat-toolbar>
 <div class="container">
     <mat-card style="font-size: 17px" class="example-card">
       <h4 class="py-4" style="font-size: 22px;">SIGN-UP</h4>
@@ -31,14 +38,14 @@
       </mat-form-field>
        
       
-      <mat-form-field class="example-full-width" appearance="fill">
+       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Telephone</mat-label>
         <span matPrefix>+91 &nbsp;</span>
         <input  name="phone"formControlName='phone' type="tel" matInput placeholder="555-555-1234">
         <mat-icon matSuffix>mode_edit</mat-icon>
-      </mat-form-field>
+      </mat-form-field> 
      
-      <div class="adr">
+  <div class="adr">
         <mat-form-field class="adr1" appearance="fill">
           <mat-label>City</mat-label>
           <input   name="city" formControlName="city" matInput placeholder="Ex. San Francisco">
@@ -49,9 +56,9 @@
           <input   name="state" formControlName="state" matInput placeholder="Ex. California">
         </mat-form-field>
         
-      </div>
+      </div> 
       <div class="button">
-      <button type="submit" mat-raised-button class="button">Sign-up</button>
+      <button type="submit"routerLink="login" mat-raised-button class="button">Sign-up</button>
     </div>
     </form>
     </mat-card>
