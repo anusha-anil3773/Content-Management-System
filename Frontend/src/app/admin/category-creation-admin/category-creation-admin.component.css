@@ -1,0 +1,23 @@
+
+  
+  .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* .example-headers-align .mat-form-field + .mat-form-field {
+    margin-left: 8px;
+  } */
+  mat-form-field{
+    width: 100%;
+  }
+  .container{
+    width:100%;
+  }
+  .createCategory{
+    width:100%;
+  }
+ .create{
+  background-color: rgb(211, 116, 20);
+  color: white;
+ }

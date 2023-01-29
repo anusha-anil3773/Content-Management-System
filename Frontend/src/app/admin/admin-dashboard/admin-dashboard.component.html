@@ -1,1 +1,22 @@
-<p>admin-dashboard works!</p>
+<div >
+  <mat-toolbar >
+      <img src="../../assets/B.png">
+      <span>Blogger</span>
+      <div  class="navspace" ></div>
+      <!-- <a routerLinkActive="active"(click)="goBack()" mat-button> Go Back</a> -->
+      <a  mat-raised-button (click)="logout()">LogOut</a>
+    </mat-toolbar>
+  </div>
+<div class="containe">
+    <div>
+      <mat-selection-list class="category" #shoes [multiple]="false">
+        <mat-list-option routerLink="/admin/dashboard">Dashboard</mat-list-option> 
+        <mat-list-option routerLink="viewCategory">View Categories</mat-list-option>
+        <mat-list-option routerLink="createCategory">Add Category</mat-list-option>
+      </mat-selection-list>
+    </div>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+   </div>
+  </div>
+  

@@ -1,0 +1,22 @@
+.del_upd{
+    display: flex;
+    justify-content: space-around;
+}
+mat-panel-title,mat-panel-description{
+    color: rgb(211, 116, 20);
+}
+.del_icon,.upd_icon{
+   
+    border-radius: 50%;
+    transform: scale(1.5);
+}
+/* .del_icon{
+    background-color: rgb(234, 162, 27);
+}
+.upd_icon{
+    background-color: rgb(203, 139, 10);
+  
+} */
+.ca{
+    margin-bottom: 1%;
+}

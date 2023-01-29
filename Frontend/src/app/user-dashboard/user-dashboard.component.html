@@ -1,0 +1,22 @@
+<div >
+  <mat-toolbar >
+      <img src="../../assets/B.png">
+      <span>Blogger</span>
+      <div  class="navspace" ></div>
+      <!-- <a routerLinkActive="active"(click)="goBack()" mat-button> Go Back</a> -->
+      <!-- <button mat-button matStepperPrevious>Back</button> -->
+      <a  mat-raised-button (click)="logout()">LogOut</a>
+    </mat-toolbar>
+  </div>
+<div class="containe">
+ <mat-selection-list class="category" #shoes [multiple]="false">
+        <mat-list-option routerLink="yourPosts">Posts</mat-list-option>
+        <mat-list-option routerLink="/dashboard">Latest Posts</mat-list-option>
+        <mat-list-option routerLink="createPost">Create new posts</mat-list-option>
+</mat-selection-list>
+ <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  

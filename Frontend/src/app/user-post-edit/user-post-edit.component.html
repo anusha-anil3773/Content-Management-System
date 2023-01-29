@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="tool">
+      <p>
+        <mat-toolbar class="toolbar">
+          <span>edit your post</span>
+          <span class="example-spacer"></span>
+        </mat-toolbar>
+      </p>
+    </div>
+    <div class="edit">
+      <form (ngSubmit)="editpost()" class="example-form">
+        <mat-form-field appearance="fill">
+          <mat-label>CATEGORIES</mat-label>
+          <mat-select name="category"[(ngModel)]="post.category" required>
+            <mat-option *ngFor="let item of category" value="{{item.categoryTitle}}">{{item.categoryTitle}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>TITLE</mat-label>
+          <input matInput [(ngModel)]="post.heading" name="title" required />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>DESCRIPTION</mat-label>
+          <textarea
+            rows="7"
+            matInput
+            name="description"
+            [(ngModel)]="post.description"
+          ></textarea>
+        </mat-form-field>
+        <button type="submit" class="button" mat-button>submit</button>
+      </form>
+    </div>
+  </div>
+  

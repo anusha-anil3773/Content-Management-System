@@ -25,11 +25,27 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CategoryCreationAdminComponent } from './category-creation-admin/category-creation-admin.component';
+import { PostComponent } from './post/post.component';
+import { SinglePostComponent } from './single-post/single-post.component';
+import { CategoryViewComponent } from './category-view/category-view.component';
+import { UpdateCategoryComponent } from './update-category/update-category.component';
+import { PostFormComponent } from './post-form/post-form.component';
+import { DashboardPartComponent } from './dashboard-part/dashboard-part.component';
+
 
 @NgModule({
   declarations: [
     LoginComponent,
-    AdminDashboardComponent
+    AdminDashboardComponent,
+    CategoryCreationAdminComponent,
+    PostComponent,
+    SinglePostComponent,
+    CategoryViewComponent,
+    UpdateCategoryComponent,
+    PostFormComponent,
+    DashboardPartComponent,
+
   ],
   imports: [
     CommonModule,

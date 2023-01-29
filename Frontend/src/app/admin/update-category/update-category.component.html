@@ -1,0 +1,42 @@
+<h2 mat-dialog-title>Update category details</h2>
+<mat-dialog-content class="mat-typography">
+ 
+    <div class="container">
+        <div class="createCategory">
+          <form  class="example-form">
+            <mat-accordion class="example-headers-align" multi>
+              <mat-expansion-panel expanded="true">
+                <mat-expansion-panel-header>
+                  <mat-panel-title> edit Category </mat-panel-title>
+                </mat-expansion-panel-header>
+      
+                <mat-form-field appearance="fill">
+                  <mat-label>Title</mat-label>
+                  <input matInput name="title" [(ngModel)]="data.title"/>
+                </mat-form-field>
+      <mat-divider></mat-divider>
+                <mat-form-field appearance="fill">
+                  <mat-label>Description</mat-label>
+                  <input matInput name="Description"[(ngModel)]="data.description" />
+                </mat-form-field>
+       
+                 <!-- <button (click)="update(data)"
+                  type="submit"
+                  mat-flat-button
+                  class="create"
+                >
+                  create
+                </button>  -->
+                <!-- [disabled]="!form.valid" -->
+              </mat-expansion-panel>
+              
+            </mat-accordion>
+          </form>
+        </div>
+      </div>
+      
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button  mat-button [mat-dialog-close]="false" cdkFocusInitial>cancel</button>
+  <button (click)="update(data)" mat-button [mat-dialog-close]="true" cdkFocusInitial>update</button>
+</mat-dialog-actions>

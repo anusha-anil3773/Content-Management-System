@@ -1,22 +1,35 @@
 <div class="container ">
     <mat-card style="font-size: 15px" class="example-card ">
     <form class="example-form"(ngSubmit)="userdata()">
-       <h4 class="heading" style="font-size: 30px">User Login</h4>
+       <h4 class="heading" style="font-size: 30px">Login</h4>
       <div class="head">
-        <mat-form-field class="example-full-width" appearance="fill">
+        <mat-form-field class="example-full-width" appearance="fill" >
           <mat-label>Email Id</mat-label>
           <input [(ngModel)]="login.email" matInput name="email" placeholder="123@abc">
         </mat-form-field>
         <mat-form-field class="example-full-width" appearance="fill">
           <mat-label>Enter your password</mat-label>
           <input [(ngModel)]="login.password" name="password" matInput [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <!-- <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
             <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
+          </button> -->
         </mat-form-field>
-        <button mat-raised-button class="button">Sign-in</button>
+        <button mat-raised-button class="button">Login</button>
       </div>
     </form>
     </mat-card>
     </div>
-    
+    <!-- <div class="box">
+      <h2>Login</h2>
+      <form (ngSubmit)="userdata()">
+        <div class="inputBox">
+          <input type="email" name="email"  [(ngModel)]="login.email" required>
+          <label>User Login</label>
+        </div>
+        <div class="inputBox">
+          <input type="text"[(ngModel)]="login.password" name="password" required>
+          <label>Password</label>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div> -->

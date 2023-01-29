@@ -1,10 +1,12 @@
-const usersModel = require("../models/users-admin");
+const usersModel = require("../models/admin-and-users");
 const express = require("express");
 const { default: mongoose } = require("mongoose");
 const { json } = require("express");
 const route = express.Router();
 const bcrypt = require("bcrypt");
 const { object } = require("joi");
+const category = require("../models/category");
+const post = require("../models/posts");
 const jwt = require("jsonwebtoken");
 
 
@@ -103,5 +105,133 @@ try {
   console.log(err);
 }
 
+try {
+  route.get("/viewCategories",  (req, res) => {
+    category.find().then((data) => {
+      console.log("the categories are", data);
+      res.send(data);
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.get("/viewAllPost", (req, res) => {});
+} catch (err) {}
+
+try {
+  route.get("/viewLatestPost", (req, res) => {
+    post
+      .find()
+      .sort({ time: -1 })
+      .limit(4)
+      .then((data) => {
+        res.send(data);
+      });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.get("/viewYourPost/:email",(req, res) => {
+    email = req.params.email;
+    console.log(email);
+    post.find({ email: email }).then((data) => {
+      res.send(data);
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.post("/addPost", (req, res) => {
+    console.log(req.body);
+    // em = req.body.email;
+    // console.log(em)
+    let data = {
+      // email:String,
+      heading: req.body.heading,
+      description: req.body.description,
+      category: req.body.category,
+      email: req.body.email,
+    };
+    let datas = new post(data);
+    datas.save().then(() => {
+      console.log("data saved");
+      res.send({ message: "the post is created successfully" });
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.delete("/deletePost/:id", (req, res) => {
+    let id = req.params.id;
+    post.findByIdAndDelete({ _id: id }).then(() => {
+      console.log("deleted");
+      res.send({ message: "deleted" });
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.get("/viewApost/:postid", (req, res) => {
+    let id = req.params.postid;
+    console.log(id);
+    post.findOne({ _id: id }).then((data) => {
+      console.log(data);
+      res.send(data);
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.get("/viewPostsInCategory/:categoryTitle", (req, res) => {
+    let category = req.params.categoryTitle;
+    console.log(category);
+    post.find({ category: category }).then((data) => {
+      console.log(data);
+      res.send(data);
+    });
+  });
+} catch (err) {
+  console.log(err);
+}
+
+try {
+  route.put("/updatePost/:id", (req, res) => {
+    let id = req.params.id;
+    console.log(req.body);
+    console.log(id);
+    let heading = req.body.heading;
+    let description = req.body.description;
+    let category = req.body.category;
+    post
+      .findByIdAndUpdate(
+        { _id: id },
+        {
+          $set: {
+            heading: heading,
+            description: description,
+            category: category,
+          },
+        }
+      )
+      .then(() => {
+        console.log("updated");
+        res.send({ message: "updated" });
+      });
+  });
+} catch (err) {
+  console.log(err);
+}
 
 module.exports = route;

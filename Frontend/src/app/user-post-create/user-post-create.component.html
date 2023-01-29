@@ -1,0 +1,67 @@
+<div class="container">
+    <mat-toolbar>
+      <button
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      ></button>
+      <span>Create new post</span>
+      <span class="example-spacer"></span>
+    </mat-toolbar>
+<mat-stepper linear #stepper>
+      <mat-step  [editable]="isEditable">
+        <form>
+          <ng-template matStepLabel> Category</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>category</mat-label>
+            <mat-select  name="category" [(ngModel)]="data.category">
+              <mat-option *ngFor="let item of category" value="{{item.categoryTitle}}">{{item.categoryTitle}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step  [editable]="isEditable">
+        <form >
+          <ng-template matStepLabel>add title</ng-template>
+          <mat-form-field appearance="fill">
+            <mat-label>title</mat-label>
+            <input
+            [(ngModel)]="data.heading"
+            name="heading"
+              matInput
+             
+              placeholder="Ex. 1 Main St, New York, NY"
+              required
+            />
+          </mat-form-field>
+          
+          <mat-form-field appearance="fill">
+            <mat-label>content</mat-label>
+            <textarea
+            [(ngModel)]="data.description"
+            name="description"
+              rows="7"
+              matInput
+              placeholder="Ex. It makes me feel..."
+            ></textarea>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button (click)="create(data)">submit</button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  
+  </div>
+  

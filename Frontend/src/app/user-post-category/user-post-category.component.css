@@ -1,0 +1,38 @@
+mat-toolbar{
+    height:40px;
+    background-color: rgb(211, 116, 20);
+    width: 100%;
+    margin-bottom: 10px;
+}
+.displayYourPost:hover{
+    transform: scale(1.02);
+    /* cursor: pointer; */
+   }
+
+.add{
+    color: rgb(211, 116, 20);  
+}
+.a{
+display: flex;
+}
+.displayYourPost:hover{
+ transform: scale(1.02);
+ /* cursor: pointer; */
+}
+.displayYourPost .u{
+    display: none;
+} 
+.displayYourPost:hover .u{
+ 
+    display: block;
+    
+   }
+.displayYourPost{
+margin-bottom: 8px;
+text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}
+.des{
+    max-width: 200px;
+    min-width: 100px;
+    text-overflow: ellipsis; white-space: nowrap; overflow: hidden;
+}

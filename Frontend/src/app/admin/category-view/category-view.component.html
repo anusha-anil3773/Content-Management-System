@@ -1,0 +1,39 @@
+
+<div class="container">
+ <ng-container *ngFor="let item of name" >
+        <div class="ca">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                   {{item.categoryTitle}}
+                </mat-panel-title>
+                <mat-panel-description>
+                   {{item.description}}
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <mat-divider></mat-divider>
+            <button (click)="onclick(item.categoryTitle)"  mat-button color="secondary" routerLink="/admin/dashboard/posts"
+                   >view all posts in this category
+            </button>
+            <mat-divider></mat-divider>
+            <div class="del_upd">
+                <div class="delete">
+                    <p>delete category</p>
+                    <button mat-icon-button (click)="delete(item.categoryTitle)">
+                        <mat-icon class="" aria-label="label">delete</mat-icon>    
+                    </button>
+                </div>
+                <div class="update">
+                    <p>update category</p>
+                    <!-- (click)="update(item.categoryTitle)" -->
+                    <button mat-icon-button (click)="openDialog(item._id,item.categoryTitle,item.description)">
+                        <mat-icon class="" aria-label="label">edit</mat-icon>    
+                    </button>
+                </div>
+            </div>
+            
+        </mat-expansion-panel>
+    </div>
+    </ng-container>
+    
+</div>

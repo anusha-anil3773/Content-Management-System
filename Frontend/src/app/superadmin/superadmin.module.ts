@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SuperadminRoutingModule } from './superadmin-routing.module';
 import { DashboardSuperadminComponent } from './dashboard-superadmin/dashboard-superadmin.component';
-
 
 import{MatSelectModule}from '@angular/material/select'
 import {MatCheckboxModule} from '@angular/material/checkbox';
@@ -26,13 +24,17 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { LoginSuperadminComponent } from './login-superadmin/login-superadmin.component';
-
+import { AdminManageComponent } from './admin-manage/admin-manage.component';
+import { UserManageComponent } from './user-manage/user-manage.component';
+import { SuperadminComponent } from './superadmin/superadmin.component';
 
 @NgModule({
   declarations: [
     DashboardSuperadminComponent,
- 
-    LoginSuperadminComponent
+    LoginSuperadminComponent,
+    AdminManageComponent,
+    UserManageComponent,
+    SuperadminComponent
   ],
   imports: [
     CommonModule,

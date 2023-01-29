@@ -1,6 +1,10 @@
 
   .heading{
     padding: 5%;
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(234, 140, 17);
+    text-align: center;
   }
   .button{
   background-color: rgb(221, 158, 74);
@@ -16,7 +20,7 @@
   
   [class*='example-card'] {
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(245, 244, 244);
      margin-top: 16%;
     width: 70%;
     padding: 7% 1% 7% 1%;
@@ -30,7 +34,7 @@
       }
       .example-card{
         margin: auto;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(244, 205, 173);
          margin-top: 10%;
         width: 40%;
         padding: 7% 1% 7% 1%;

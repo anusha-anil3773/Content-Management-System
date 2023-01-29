@@ -1,1 +1,61 @@
-<p>user-signup works!</p>
+<div class="container">
+    <mat-card style="font-size: 17px" class="example-card">
+      <h4 class="py-4" style="font-size: 22px;">SIGN-UP</h4>
+  
+      <form class="example-form" [formGroup]='form' (ngSubmit)=" adduser()">
+        <div class="email">
+        <mat-form-field class="email1" appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input name="email" matInput placeholder="pat@example.com"formControlName="email" required>
+          <!-- <mat-error *ngIf="form.email.errors.required"></mat-error>  -->
+        </mat-form-field>
+      </div>
+     <div class="name">
+        <mat-form-field class="name1" appearance="fill">
+          <mat-label>First name</mat-label>
+          <input   name="firstname" formControlName="firstname" matInput>
+        </mat-form-field>
+        <mat-form-field class="name1" appearance="fill">
+          <mat-label>Last Name </mat-label>
+          <input  formControlName='lastname' name="lastname" matInput>
+        </mat-form-field>
+      </div>
+    
+    
+      <mat-form-field class="password" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input name="password" formControlName="password" matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+       
+      
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telephone</mat-label>
+        <span matPrefix>+91 &nbsp;</span>
+        <input  name="phone"formControlName='phone' type="tel" matInput placeholder="555-555-1234">
+        <mat-icon matSuffix>mode_edit</mat-icon>
+      </mat-form-field>
+     
+      <div class="adr">
+        <mat-form-field class="adr1" appearance="fill">
+          <mat-label>City</mat-label>
+          <input   name="city" formControlName="city" matInput placeholder="Ex. San Francisco">
+        </mat-form-field>
+        
+       <mat-form-field class="adr1" appearance="fill">
+          <mat-label>State</mat-label>
+          <input   name="state" formControlName="state" matInput placeholder="Ex. California">
+        </mat-form-field>
+        
+      </div>
+      <div class="button">
+      <button type="submit" mat-raised-button class="button">Sign-up</button>
+    </div>
+    </form>
+    </mat-card>
+  </div>
+  
+    
+    

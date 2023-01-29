@@ -1,0 +1,67 @@
+.toolbar {
+    background-color: rgb(211, 116, 20);
+    width: 100%;
+    height: 40px;
+  }
+  .bu {
+    background-color: rgb(211, 116, 20);
+  }
+  .container {
+    display: flex;
+  }
+  @media screen and (max-width: 800px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      min-width: 100%;
+    }
+    .tool,
+    .posts {
+      min-width: 100%;
+    }
+    .categories,
+    .mat-chip {
+      min-width: 100%;
+    }
+  }
+  .posts {
+    width: 70%;
+    margin-right: 10px;
+    background-color: rgb(211, 116, 20);
+  }
+  .categories {
+    width: 50%;
+  }
+  mat-chip {
+    width: 150px;
+    
+  }
+  .displayYourPost:hover {
+    transform: scale(1.02);
+  }
+  .des {
+    max-width: 100px;
+    min-width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .displayYourPost .u {
+    display: none;
+    
+  }
+  
+  .displayYourPost:hover .u {
+    display: block;
+  }
+  .displayYourPost {
+    margin-bottom: 1%;
+  }
+  .mat-chip.mat-standard-chip {
+    background-color: rgb(211, 116, 20);
+    color: rgb(216, 231, 244);
+  }
+   
+
+    

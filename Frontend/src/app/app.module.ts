@@ -29,6 +29,19 @@ import {MatChipsModule} from '@angular/material/chips';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatStepperModule} from '@angular/material/stepper';
+
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserPostCategoryComponent } from './user-post-category/user-post-category.component';
+import { UserPostEditComponent } from './user-post-edit/user-post-edit.component';
+import { UserPostCreateComponent } from './user-post-create/user-post-create.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { UserSinglePostComponent } from './user-single-post/user-single-post.component';
+import { UserNewPostComponent } from './user-new-post/user-new-post.component';
 
 
 
@@ -39,6 +52,17 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     UserComponent,
     UserLoginComponent,
     UserSignupComponent,
+    UserDashboardComponent,
+    UserProfileComponent,
+    UserPostCategoryComponent,
+    UserPostEditComponent,
+    UserPostCreateComponent,
+    HeaderComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
+    UserSinglePostComponent,
+    UserNewPostComponent,
 
 
   ],
@@ -68,7 +92,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatDialogModule,
     MatToolbarModule,
     MatTooltipModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatStepperModule
 
   ],
   providers: [],

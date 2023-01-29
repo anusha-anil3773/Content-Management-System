@@ -1,0 +1,37 @@
+<!-- <div class="container">
+    <div>
+      <mat-selection-list class="category" #shoes [multiple]="false">
+        <mat-list-option routerLink="superadmin/dashboard">Dashboard</mat-list-option>
+        <mat-list-option routerLink="manageadmin">Manage admins</mat-list-option> 
+        <mat-list-option routerLink="manageuser">Manage users</mat-list-option>
+       ? <mat-list-option routerLink="createCategory">add new category</mat-list-option> -->
+        <!-- <mat-list-option>asdasdasd</mat-list-option> -->
+      <!-- </mat-selection-list>
+    </div>
+    <div class="outlet">
+      <router-outlet></router-outlet>
+   </div>
+  </div>  -->
+
+  <div >
+    <mat-toolbar >
+        <img src="../../assets/B.png">
+        <span>Blogger</span>
+        <div  class="navspace" ></div>
+        <!-- <a routerLinkActive="active"(click)="goBack()" mat-button> Go Back</a> -->
+        <a  mat-raised-button (click)="logout()">LogOut</a>
+      </mat-toolbar>
+    </div>
+  <div class="containe">
+      <div>
+        <mat-selection-list class="category" #shoes [multiple]="false">
+          <mat-list-option routerLink="/superadmin/dashboard">Dashboard</mat-list-option> 
+          <mat-list-option routerLink="manageadmin">Manage admins</mat-list-option> 
+        <mat-list-option routerLink="manageuser">Manage users</mat-list-option>
+        </mat-selection-list>
+      </div>
+      <div class="outlet">
+        <router-outlet></router-outlet>
+     </div>
+    </div>
+    
